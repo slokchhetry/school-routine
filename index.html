@@ -8,53 +8,27 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa; /* Light background for a clean look */
+            background-color: #f0f8ff;
         }
         h1 {
-            color: #343a40; /* Dark gray color for the title */
+            color: #4b0082;
             margin: 20px 0;
-            text-align: center; /* Center the title */
         }
         .table-container {
-            margin: 0 auto; /* Center the table container */
-            max-width: 800px; /* Limit max width of the table */
-        }
-        .table {
-            table-layout: fixed; /* Fixed table layout */
-            width: 100%; /* Full width */
+            overflow-x: auto; /* Allow horizontal scroll for tables */
         }
         .author {
             margin-top: 40px;
             font-size: 16px;
-            color: #495057; /* Medium gray for author section */
-            text-align: center; /* Center the author section */
-        }
-        th {
-            background-color: #007bff; /* Blue header background */
-            color: white; /* White text for headers */
-        }
-        td {
-            background-color: #ffffff; /* White background for table cells */
-            color: #343a40; /* Dark text for cells */
-        }
-        tr:nth-child(even) td {
-            background-color: #e9ecef; /* Light gray for even rows */
-        }
-        button {
-            display: block; /* Center button */
-            margin: 20px auto; /* Add margin for spacing */
+            color: #4b0082;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>School Routine</h1>
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10 col-sm-12">
-                <div class="table-container" id="routineContainer"></div>
-                <button class="btn btn-primary" onclick="generateRoutine()">Generate New Routine</button>
-            </div>
-        </div>
+        <div class="table-container" id="routineContainer"></div>
+        <button class="btn btn-primary" onclick="generateRoutine()">Generate New Routine</button>
 
         <!-- Author Section -->
         <div class="author">
@@ -87,7 +61,7 @@
 
             classes.forEach(className => {
                 const table = document.createElement('table');
-                table.classList.add('table', 'table-bordered', 'mb-4');
+                table.classList.add('table', 'table-bordered', 'table-responsive', 'mb-4');
 
                 // Create table header
                 const headerRow = document.createElement('tr');
