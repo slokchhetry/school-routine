@@ -8,7 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #e9ecef; /* Light gray background */
+            background-color: #f8f9fa; /* Light background for a clean look */
         }
         h1 {
             color: #343a40; /* Dark gray color for the title */
@@ -16,12 +16,11 @@
             text-align: center; /* Center the title */
         }
         .table-container {
-            overflow-x: auto; /* Allow horizontal scroll for tables */
             margin: 0 auto; /* Center the table container */
             max-width: 800px; /* Limit max width of the table */
         }
         .table {
-            table-layout: fixed; /* Prevent width change on generation */
+            table-layout: fixed; /* Fixed table layout */
             width: 100%; /* Full width */
         }
         .author {
@@ -39,7 +38,7 @@
             color: #343a40; /* Dark text for cells */
         }
         tr:nth-child(even) td {
-            background-color: #f8f9fa; /* Light gray for even rows */
+            background-color: #e9ecef; /* Light gray for even rows */
         }
         button {
             display: block; /* Center button */
@@ -50,8 +49,12 @@
 <body>
     <div class="container">
         <h1>School Routine</h1>
-        <div class="table-container" id="routineContainer"></div>
-        <button class="btn btn-primary" onclick="generateRoutine()">Generate New Routine</button>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="table-container" id="routineContainer"></div>
+                <button class="btn btn-primary" onclick="generateRoutine()">Generate New Routine</button>
+            </div>
+        </div>
 
         <!-- Author Section -->
         <div class="author">
